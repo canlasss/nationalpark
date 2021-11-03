@@ -25,7 +25,6 @@ header h1 {margin: 0;}
 header h2 {margin: 0; font-weight: normal;}
 
 /*----------- NAVIGATION --------------*/
-div#navWrapper {background-color: #666;}
 
 nav ul {
     list-style-type: none;
@@ -62,11 +61,15 @@ main {
     min-height: 10rem;
 
     $cbr: 10px
-    .card-deck{}
+    .card-deck{
+        display: flex;
+        flex-wrap: wrap;
+    }
     .card {
+        flex-basis: 100%;
         border: 1px solid #999;
         border-radius: $cbr;
-        margin: 1rem 0;
+        margin: 1rem 1%;
         text-align: center;
         section {
             background-color: #444;
@@ -76,14 +79,22 @@ main {
             border-top-right-radius: $cbr - 1;
 
         } // end of section
+
+        img {
+            padding: 1rem;
+        }
+        p {padding: 1rem 2 vw;}
+        a {
+            display: block;
+            background-color: plum;
+            color: white;
+            padding: 1rem 0;
+            margin: 1rem 4vw;
+            border-radius: $cbr;
+        }
     }   // end of card
 
-
-
-}
-
 /*----------- FOOTER --------------*/
-div#footerWrapper {background-color: #ddd;}
 footer {
 
     padding: .5rem 2%;
